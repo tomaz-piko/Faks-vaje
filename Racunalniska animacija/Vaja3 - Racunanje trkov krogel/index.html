@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="utils/uiutils.js"></script>
+</head>
+<body>
+  <div id="fpsCounter"></div>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> x </a>
+    <!-- Physics settings -->
+    <div class="settings-group">
+      <div class="row">
+        <div class="col">
+          <label>Speed:</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="1" id="speedValue">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseSpeed()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseSpeed()">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Bounce factor (k):</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="0.75" id="bounceFactor">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseBounceFactor()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseBounceFactor()">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Alfa:</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="0.5" id="alfaFactor">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseAlfaFactor()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseAlfaFactor()">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Beta:</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="0.015" id="betaFactor">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseBetaFactor()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseBetaFactor()">+</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!-- Ball settings -->
+    <div class="settings-group">
+      <div class="row">
+        <div class="col">
+          <label>Ball count:</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="5" id="ballCount">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseBallCount()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseBallCount()">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Ball radius:</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="1" id="ballRadius">
+            <button class="btn btn-outline-light" type="button" onclick="decreaseBallRadius()">-</button>
+            <button class="btn btn-outline-light" type="button" onclick="increaseBallRadius()">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Constraint settings -->
+     <div class="settings-group">
+      <div class="row">
+        <div class="col">
+          <label>Constraint dims (a | b | c):</label>
+          <div class="input-group">         
+            <input type="text" class="form-control" value="10" id="constraintX">
+            <input type="text" class="form-control" value="10" id="constraintY">
+            <input type="text" class="form-control" value="10" id="constraintZ">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Apply button -->
+    <div class="row">
+      <div class="col text-center">
+         <button class="btn btn-primary center" onclick="applySettings()">Apply</button>
+      </div>
+    </div>
+    
+  </div>
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Settings</button>
+  </div>
+  <div id="canvas"></div>
+  <script src="utils/utils.js"></script>
+  <script src="../Libraries/three.js"></script>
+  <script src="../Libraries/OrbitControls.js"></script>
+  <script src="utils/settings.js"></script>
+  <script src="classes/Vec3.js"></script>
+  <script src="classes/BoundryBox.js"></script>
+  <script src="classes/Ball.js"></script>
+  <script src="main.js"></script> 
+</body>
+</html> 

@@ -1,0 +1,26 @@
+#fpsCounter {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  border: 1px solid black;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+#respawnBtn {
+  position: absolute;
+  top: 520px;
+  left: 100px;
+  z-index: 9999;
+}
+
+#runTestBtn {
+  position: absolute;
+  top: 520px;
+  left: 210px;
+  z-index: 9999;
+}

@@ -1,0 +1,13 @@
+#setBtn {
+  position: absolute;
+  top: 480px;
+  left: 160px;
+  z-index: 9999;
+}
+
+#addOneBtn {
+  position: absolute;
+  top: 660px;
+  left: 160px;
+  z-index: 9999;
+}
