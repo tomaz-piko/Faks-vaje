@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Vedenje agentov</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta charset="UTF-8">
+</head>
+ 
+<body>
+  <div class="row"><span style="margin-left: 50px;">Click on the canvas to spawn objects!</span></div>
+  <div class="row">
+    <div class="col-5">
+      <canvas id="myCanvas" width="500" height="500">
+ 
+      </canvas>
+    </div>
+
+    <div class="col-2">
+      <label>Shape:</label>
+      <div class="input-group mb-3">        
+        <button type="button" class="btn btn-primary" onClick="changeShape('CIRCLE')">CIRCLES</button>
+        <button type="button" class="btn btn-secondary" onClick="changeShape('TRIANGLE')">TRIANGLES</button>
+      </div>
+
+      <label>Behaviour mode select:</label>
+      <div class="input-group mb-3">
+        <select class="form-select" id="modeSelectInput">
+          <option value="SEEK">Seek</option>
+          <option value="ARRIVE">Arrive</option>
+          <option value="STAYWITHINWALLS">Stay within walls</option>
+          <option value="WANDER">Wander</option>
+          <option value="SEPARATE">Separate</option>
+          <option value="ALIGN">Align</option>
+          <option value="COHESION">Cohesion</option>
+          <option value="FLOCK" selected>Flock</option>
+        </select>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" onClick="setSelectedMode()">SET</button>
+        </div>
+      </div>
+      
+      <label># of new elements on click:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" value="1" id="placementNumInput">
+        <button type="button" class="btn btn-primary" onClick="increasePlacementNum()">+</button>
+        <button type="button" class="btn btn-secondary" onClick="decreasePlacementNum()">-</button>
+      </div>
+
+      <label>Max force:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Max force..." onChange="setMaxForce(this.value)" id="maxForceInput">
+      </div>
+
+      <label>Max speed:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Max speed..." onChange="setMaxSpeed(this.value)" id="maxSpeedInput">
+      </div>
+    
+      <label>Additional options:</label>
+      <div class="input-group mb-3">        
+        <button type="button" class="btn btn-primary" onClick="applyOptionsToAll()">APPLY TO ALL</button>
+      </div>
+      <div class="input-group mb-3">        
+        <button type="button" class="btn btn-danger" onClick="deleteAllVehichles()">DELETE ALL</button>
+      </div>
+    </div>
+    <div class="col-2">
+      <label>Arrive brake radius:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setBrakeRadius(this.value)" id="brakeRadiusInput">
+      </div>
+
+      <label>Wall thickness:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setWallThickness(this.value)" id="wallThicknessInput">
+      </div>
+
+      <label>Wander radius:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setWanderRadius(this.value)" id="wanderRadiusInput">
+      </div>
+
+      <label>Wander look ahead:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setWanderLookAhead(this.value)" id="wanderLookAheadInput">
+      </div>
+      
+      <label>Desired separation:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setDesiredSeparation(this.value)" id="desiredSeparationInput">
+      </div>
+
+      <label>Cohesion min dist:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" onChange="setCohesionMinDist(this.value)" id="cohesionMinDistInput">
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="flexCheckDefault">
+          Show wanderer target
+        </label>
+        <input class="form-check-input" type="checkbox" value="" id="wandererTargetCheck">
+    </div>
+
+    <div class="col-3">
+      
+    </div>
+    
+  </div>
+  <script src="classes/PVector.js" type="text/javascript"></script> 
+  <script src="classes/Vehicle.js" type="text/javascript"></script> 
+  <script src="main.js" type="text/javascript"></script> 
+</body>
+ 
+</html>

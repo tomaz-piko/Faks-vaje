@@ -1,0 +1,12 @@
+body {
+  margin: 0px;
+  padding: 50px;
+}
+
+#myCanvas {
+  border: 1px rgb(0, 0, 0) solid;
+}
+
+#ex1Slider .slider-selection {
+  background: #bababa;
+}

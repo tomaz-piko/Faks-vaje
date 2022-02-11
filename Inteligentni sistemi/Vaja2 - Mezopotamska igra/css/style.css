@@ -1,0 +1,54 @@
+body {
+  margin: 0px;
+  padding: 50px;
+}
+
+#gameBoard td {
+  border: 2px solid black;
+  height: 75px;
+  width: 75px;
+}
+
+#player1Tiles td,
+#player2Tiles td {
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+.blank {
+  background-color: rgb(255, 255, 255);
+  border: none !important;
+}
+
+.roseta {
+  background-color: rgb(219, 219, 129);
+}
+
+.blue {
+  background-color: rgb(184, 255, 255);
+}
+
+.warZone {
+  background-color: rgb(223, 255, 176);
+}
+
+#statusText {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#diceRollText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tokenImage {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  z-index: 100;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
