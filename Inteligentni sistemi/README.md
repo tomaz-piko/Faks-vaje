@@ -1,33 +1,21 @@
-# ChatBot2
+# Inteligentni sistemi
+Vaja 1 in 2, plain HTML + javascript, nekaj malega bootstrapa in css-a. Vaja 3 Python in tensorflow.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+## Vaja1: Vedenje agentov
+Različna obnašanja enega ali več avtomobilu podobnih agentov. Vse deluje na lastni implementaciji 2D vektorjev. Na agente delujejo sile, ki jih usmerjajo.
 
-## Lokacije pomembnih datotek
+Obnašanja:
+- Seek: Agenti sledijo poziciji miške.
+- Arrive: Agenti "prispe" na položaj miške. Pred ciljem začne upočasnevati.
+- Stay within walls: Agenti poskušajo ostati znotraj omejenega območja.
+- Wander: Agenti "tavajo" naokrog.
+- Seperate: Agenti držijo določeno distanco drug od drugega.
+- Align: Agenti se poravnajo in potujejo v isto stran.
+- Cohesion: Agenti se združujejo v grupe.
+- flock: Align + sperate + cohesion. Simulacija jate ptic.
 
-Podatkovne zbirke --> ./Datasets
+## Vaja2: Mezopotamska igra
+Mezopotamska igra za dva igralca, podobno kot človek ne jezi se. Met kocke in kdo prvi spravi vse figure do konca. Implementirani tudi AI nasprotniki z različnimi pristopi igre.
 
-Modeli --> ./src/assets/Models
-
-## Navodila za namestitev
-
-Potrebujete node packet manager (npm) in angular-cli.
-
-1.) Download zip & extract ali fork repozitorija na poljubno lokacijo.
-
-2.) CMD / PowerShell window v direktoriju projekta (za izvajanje ukazov).
-
-3.) Ukaz 'npm i' za namestitev.
-
-4.) Ukaz 'npm audit fix' v kolikor na koraku 3 opozori na prekrivanja različic.
-
-5.) Ukaz 'ng serve' za zagon aplikacije na lokalnem strežniku.
-
-6.) `http://localhost:4200/` v brskalniku.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Vaja3: Prepoznava objektov
+Z uporabo prostodostopnih tensorflow modelov in njihovih knjižnic implementirati detekcijo objektov na slikah in videih.
