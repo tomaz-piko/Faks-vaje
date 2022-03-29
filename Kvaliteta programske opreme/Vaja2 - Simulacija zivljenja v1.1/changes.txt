@@ -1,0 +1,20 @@
+1) in Main.js
+	- Renamed function names
+	- cleaned up file
+	- removed some global variables
+	- cleaned init function
+	- added comments
+
+2) Renamed variables to fit conventions
+	- Global variables => SCREAMING_SNAGE_CASE
+	- Local variable => camelCase
+
+3) Move map generation functions to ./utils/mapgeneratiron.js)
+	- Cleaned up functions
+	- Added parameters to functions (less global variables usage)
+	- Delete unneccesary comments
+	- File structure => helper functions on top, functions used in other files at bottom
+	- Use constants wherever possible
+	- Remove comments
+	
+4) Moved sliders to uiutils
