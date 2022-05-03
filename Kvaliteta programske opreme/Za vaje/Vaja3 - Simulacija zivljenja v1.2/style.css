@@ -1,0 +1,66 @@
+#terrainTable td {
+  border: 1px solid black;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.animalImg {
+  width: 20px;
+  height: 20px;
+}
+
+#navigationTable td {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+.navigationArrow {
+  height: 50px;
+  width: 50px;
+}
+
+body {
+  padding: 50px;
+  background-color: darkgray;
+}
+
+.waterTerrainColor {
+  background-color: aqua !important;
+}
+
+.groundTerrainColor {
+  background-color: darksalmon !important;
+}
+
+#generateButton {
+  display: block;
+  position: fixed;
+  top: 630px;
+  left: 110px;
+}
+
+#simulationButton {
+  display: block;
+  position: fixed;
+  top: 630px;
+  left: 220px;
+}
+
+#exportButton {
+    display: block;
+    position: fixed;
+    top: 680px;
+    left: 110px;
+}
+
+#terrainTypeSelect {
+  display: block;
+  position: fixed;
+  width: 170px;
+  top: 580px;
+  left: 110px;
+}

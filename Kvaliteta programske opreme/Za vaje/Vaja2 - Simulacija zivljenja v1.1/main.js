@@ -44,8 +44,6 @@ function syncHTMLTerrainTable() {
             if (_j < 0 || _j >= TERRAIN_TABLE_DIMS.colCount) continue;
             let cellId = _i + '_' + _j;
             let cell = document.getElementById(cellId);
-            //cell.classList.remove(...cell.classList);
-            //cell.innerHTML = '';
             if (TERRAIN[i][j].terrainType == 'water') {
                 cell.classList.add("waterTerrainColor");
             }
@@ -101,7 +99,6 @@ function doSimulationStep() {
         animal.update();
         animal.move(TERRAIN);       
     });
-    console.log(ENTITIES.animals);
     // RE-DO terrain table
     syncAnimalsOnTerrain();
     syncHTMLTerrainTable();
@@ -125,15 +122,8 @@ function init() {
         SLIDERS.preyCount.value,
         SLIDERS.foodCount.value
     );
-    console.log(ENTITIES);
     syncHTMLTerrainTable();    
 }
 
 generateHTMLTerrainTable(TERRAIN_TABLE_DIMS.rowCount, TERRAIN_TABLE_DIMS.colCount);
 init();
-/*
-let startTime = performance.now();
-let endTime = performance.now();
-let elapsedTime = endTime - startTime;
-console.log("spawnInitialEntities: " + elapsedTime + 'ms');
-*/

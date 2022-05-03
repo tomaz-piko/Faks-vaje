@@ -1,5 +1,5 @@
 class Animal {
-    constructor(specie, row, col, id) {
+    constructor(specie, row, col) {
         const speciesSpecifications = getSpecifications(specie);
         const {type, hungerRange, thirstRange, speedRange, sizeRange, sensRange, maxAge} = speciesSpecifications;
         
@@ -13,7 +13,6 @@ class Animal {
         this.sensRange = sensRange;
         this.sex = (randomInteger(0, 1) == 0) ? 'M' : 'F';
         this.position = {row, col};
-        this.id = id;
         this.isDead = false;
     }
 
@@ -123,7 +122,7 @@ class Animal {
         if(this.type === 'prey') {
             const closestPlant = findClosestPlant(currPos.row, currPos.col, x_min, x_max, y_min, y_max);
             if(closestPlant) {
-                if(closestPlant.dist == 1) {
+                if(closestPlant.dist === 1) {
                     this.eat();
                     return;
                 }

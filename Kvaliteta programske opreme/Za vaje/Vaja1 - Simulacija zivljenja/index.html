@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="utils/uiUtils.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <select name="terrainType" id="terrainTypeSelect" class="form-control">
+                    <option value="random">Random</option>
+                    <option value="rivers">Rivers</option>
+                    <option value="lakes">Lakes</option>
+                    <option value="mixed">Mixed</option>
+                </select>
+                <button class="btn btn-primary" id="generateButton" onclick="generateButtonClick()">Generate</button>
+                <button class="btn btn-primary" id="simulationButton" onclick="toggleSimulButtonClick()">Start</button>    
+            </div>
+            <div class="col-7">
+                <table id="terrainTable"></table>
+            </div>
+            <div class="col-3">
+                <table id="navigationTable">
+                    <tr>
+                        <td onclick="upperLeftArrowClick()"><img src="./icons/arrow_upperleft.png" class="navigationArrow"></td>
+                        <td onclick="upArrowClick()"><img src="./icons/arrow_up.png" class="navigationArrow"></td>
+                        <td onclick="upperRightArrowClick()"><img src="./icons/arrow_upperright.png" class="navigationArrow"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="leftArrowClick()"><img src="./icons/arrow_left.png" class="navigationArrow"></td>
+                        <td></td>
+                        <td onclick="rightArrowClick()"><img src="./icons/arrow_right.png" class="navigationArrow"></td>
+                    </tr>
+                    <tr>
+                        <td onclick="lowerLeftArrowClick()"><img src="./icons/arrow_lowerleft.png" class="navigationArrow"></td>
+                        <td onclick="downArrowClick()"><img src="./icons/arrow_down.png" class="navigationArrow"></td>
+                        <td onclick="lowerRightArrowClick()"><img src="./icons/arrow_lowerright.png" class="navigationArrow"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+  <script src="./libs/slider.js"></script>
+  <script src="./classes/speciesSpecs.js"></script>
+  <script src="./classes/Animal.js"></script>
+  <script src="./classes/Plant.js"></script>
+  <script src="./utils/utils.js"></script>
+  <script src="main.js"></script> 
+</body>
+</html> 

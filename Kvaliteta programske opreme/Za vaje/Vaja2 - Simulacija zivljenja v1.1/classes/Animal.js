@@ -1,5 +1,5 @@
 class Animal {
-    constructor(specie, row, col, id) {
+    constructor(specie, row, col) {
         const speciesSpecifications = getSpecifications(specie);
         const {type, hungerRange, thirstRange, speedRange, sizeRange, sensRange, maxAge} = speciesSpecifications;
         
@@ -13,7 +13,6 @@ class Animal {
         this.sensRange = sensRange;
         this.sex = (randomInteger(0, 1) == 0) ? 'M' : 'F';
         this.position = {row, col};
-        this.id = id;
         this.isDead = false;
     }
 

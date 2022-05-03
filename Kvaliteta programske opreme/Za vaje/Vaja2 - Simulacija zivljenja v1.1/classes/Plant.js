@@ -1,12 +1,11 @@
 class Plant {
-    constructor(type, hungerRestoration, row, col, id) {
+    constructor(type, hungerRestoration, row, col) {
         this.type = type;
         this.age = 0;
         this.maxAge = randomInteger(5, 20);
         this.hungerRestoration = hungerRestoration;
         this.isDead = false;
         this.position = {row, col};
-        this.id = id;
     }
 
     grow() {

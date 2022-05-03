@@ -5,6 +5,7 @@ let TERRAIN = null;
 let INTERVAL = null;
 let INTERVAL_TIMER = 1500; 
 let ENTITIES = null;
+let SIM_STEP = 0;
 
 // Generates empty matrix used to show terrain in html
 function generateHTMLTerrainTable() {
@@ -101,10 +102,11 @@ function doSimulationStep() {
         animal.update();
         animal.move(TERRAIN);       
     });
-    console.log(ENTITIES.animals);
     // RE-DO terrain table
     syncAnimalsOnTerrain();
     syncHTMLTerrainTable();
+    extractStatistics(ENTITIES, SIM_STEP);
+    SIM_STEP++;
 }
 
 function init() {
@@ -125,7 +127,6 @@ function init() {
         SLIDERS.preyCount.value,
         SLIDERS.foodCount.value
     );
-    console.log(ENTITIES);
     syncHTMLTerrainTable();    
 }
 
